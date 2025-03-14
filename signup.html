@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEJxn+K7cF0Xk9+L9fP6A1A7mctsVfzqEmGn1/AYvg4p3yA01Tk5cK9zVScXh" crossorigin="anonymous">
+    
+    <title>Thiagarajar Journal of Engineering, Science, Design, and Technology</title>
+  
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  
+    <!-- FontAwesome Icons (Updated CDN) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  
+    <!-- Google Fonts: Poppins and Playfair Display -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  
+    <style>
+      body {
+    font-family: 'Poppins', sans-serif;
+    background-image: url('http://localhost:3001/tce.jpg'); /* Background Image */
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    color: #5a4e3e;
+    
+  }
+
+  .journal-title {
+        color: black !important;
+        font-weight: bold;
+        font-size: 1.4rem !important;
+        text-transform: uppercase;
+        padding-left: 20px;
+        margin: 0;
+        line-height: 1.2;
+        flex-grow: 1;
+        text-align: left;
+      }
+  
+  .navbar {
+        background-color: brown;
+        padding: 0;
+        min-height: 80px;
+        display: flex;
+        align-items: center;
+      }
+      
+      .navbar-brand {
+        padding: 0;
+        margin: 0;
+        height: 80px;
+        display: flex;
+        align-items: center;
+      }
+      
+      .navbar-brand img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        margin: 0;
+        padding: 0px;
+      }
+      
+ 
+      .navbar-nav .nav-item {
+        padding: 0 10px;
+      }
+      
+      .navbar-brand, .nav-link {
+        color: white !important;
+        font-family: 'Poppins', sans-serif;
+        font-size: 0.97rem;
+        font-weight: 900;
+        text-transform: uppercase;
+      }
+  
+      .navbar-brand:hover, .nav-link:hover {
+        color: #fff !important;
+        text-decoration: underline;
+      }
+  
+      .navbar-nav .nav-item.active .nav-link {
+        color: #FF4F3A !important;
+        font-weight: 700;
+      }
+  
+      .navbar-toggler {
+        border: none;
+      }
+  
+      .navbar-collapse {
+        justify-content: flex-end;
+        flex-grow: 0;
+      }
+  
+      /* Responsive navbar adjustments */
+      @media (max-width: 992px) {
+        .journal-title {
+          font-size: 1rem !important;
+        }
+        
+        .navbar-brand {
+          width: 70px;
+          height: 70px;
+        }
+      }
+      
+      @media (max-width: 768px) {
+        .journal-title {
+          font-size: 1rem !important;
+          padding-left: 10px;
+        }
+        
+        .navbar-brand {
+          width: 60px;
+          height: 60px;
+        }
+      }
+  .section-title {
+    text-align: center;
+    color: #4E2A84;
+    background-color: white;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    margin: 60px;
+    font-size: 2.5rem;
+    border-radius: 100px;
+    margin-top: 40px;
+   
+  }
+
+  .section-content {
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 900px;
+}
+
+  
+  .card {
+    margin: 30px auto;
+    background-color: rgba(255, 255, 255, 0.8); /* Transparent white background for the card */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .card-login {
+    margin: 30px auto;
+    max-width: 500px;
+    background-color: rgba(255, 255, 255, 0.8); /* Transparent white background for the card */
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .card-title {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    color: #4E2A84;
+    font-size: 2rem;
+  }
+
+  .card-body {
+    background-color: white;
+    border-radius: 8px ;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1) ;
+ }
+ .editor-card {
+    border: 2px solid #4E2A84;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  .editor-card-body {
+    padding: 15px;
+  }
+  .editor-card-title {
+    color: #4E2A84;
+    font-weight: 600;
+    font-size: 1.5rem;
+  }
+  .editor-description {
+    font-size: 1.1rem;
+    color: #333;
+  }
+  .editor-role {
+    font-size: 1.2rem;
+    color: #7f7f7f;
+  }
+  .icon {
+    font-size: 2rem;
+    color: #4E2A84;
+    margin-right: 10px;
+  }
+  .editor-name {
+    font-size: 1.2rem;
+    color: #4E2A84;
+    font-weight: 600;
+  }
+  .editor-role, .editor-description {
+    color: #333;
+    font-size: 1rem;
+  }
+  .list-group-item {
+    background-color: transparent;
+    border: none;
+    padding: 5px 0;
+  }
+
+  .icon {
+    color: #4E2A84;
+    margin-right: 10px;
+  }
+  .policy-list ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  .policy-list li {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    padding-left: 30px;
+    position: relative;
+  }
+  .policy-list li::before {
+    content: '\f00c';
+    font-family: 'FontAwesome';
+    position: absolute;
+    left: 0;
+    color: #4E2A84;
+    font-size: 1.5rem;
+  }
+
+ /* Carousel Styles */
+ #imageCarousel {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
+
+  .carousel-item {
+    height: 400px;
+  }
+
+  .carousel-item img {
+    width: 100%;
+    height: 400px;
+    object-fit: fill;
+    object-position: center;
+  }
+
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    padding: 20px;
+  }
+
+  /* Dropdown Menu Styles */
+  .dropdown-menu {
+    background-color: brown;
+    color: antiquewhite;
+    border: none;
+    z-index: 1050;
+  }
+
+  .dropdown-item {
+    color: white !important;
+  }
+
+  .dropdown-item:hover {
+    background-color: #FF4F3A;
+    color: white;
+  }
+
+  .dropdown-toggle::after {
+    content: none;
+  }
+
+  .dropdown-menu-right {
+    right: 0;
+    left: auto;
+  }
+
+  .navbar-right {
+    margin-right: 15px;
+  }
+
+  /* Container and Text Styles */
+  .container-in {
+    margin-top: 40px;
+    max-width: 900px;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .form-label {
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+
+  .recent-updates {
+    background-color: #fff;
+    padding: 30px;
+    margin-top: 50px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  .recent-updates h3 {
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 2rem;
+    color: #4E2A84;
+  }
+  .recent-updates p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    text-align: justify;
+  }
+
+  p {
+    text-align: justify;
+  }
+
+  p1 {
+    text-align: center;
+    line-height: 2;
+  }
+  
+  .form-group label {
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+  
+  .form-group .input-group-text {
+    background-color: #FF6F61;
+    color: white;
+  }
+  
+  .form-group i {
+    position: absolute;
+    top: 75%;
+    left: 15px;
+    transform: translateY(-50%); /* Center the icon vertically */
+    color: #FF6F61;
+  }
+  
+  .form-control {
+    padding-left: 40px; /* Space for the icon */
+    padding-right: 15px; /* Padding for the right side */
+    font-size: 1.1rem; /* Font size for the input text */
+  }
+  
+  .form-group input {
+    padding-left: 35px; /* Adjust padding to give space for the icon */
+  }
+  
+  .btn {
+    background-color: #FF6F61;
+    color: white;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  
+  .btn:hover {
+    background-color: #FF4F3A;
+  }
+  
+  /* Footer Styles */
+  footer {
+        background-color: brown;
+        color: white;
+        padding: 20px 0;
+        text-align: center;
+        margin-top: 40px;
+        
+      }
+  
+      footer a {
+        color: white;
+        text-decoration: none;
+        margin: 0 10px;
+      }
+  
+      footer a:hover {
+        text-decoration: underline;
+      }
+      
+  
+  /* Media queries for responsive design */
+  @media (max-width: 576px) {
+    .card {
+      margin: 20px;
+      padding: 15px;
+    }
+  }
+
+  .loading-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.spinner-border {
+    width: 3rem;
+    height: 3rem;
+}
+.loading-text {
+    color: white;
+    margin-top: 20px;
+    font-size: 1.5rem;
+}
+
+.loading-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.spinner-border {
+  width: 3rem;
+  height: 3rem;
+}
+.loading-text {
+  color: white;
+  margin-top: 20px;
+  font-size: 1.5rem;
+}
+
+#signupForm {
+  color: black;
+}
+  </style>
+  
+</head>
+    
+<body>
+  <header>
+
+    <!-- Pre-header with Journal Title -->
+<div class="pre-header text-center py-2 bg-light">
+<span class="journal-title">Thiagarajar Journal of Engineering, Science, Design, and Technology (TJESDT)</span>
+</div>
+
+<!-- Header with Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light">
+<a class="navbar-brand" href="home.html">
+  <img src="logo.png" alt="TJESDT Logo">
+</a>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarNav">
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link" href="home.html#aim-scope"><i class="fas fa-bullseye"></i> Aim & Scope</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="home.html#publication-info"><i class="fas fa-th"></i> Publication Info</a>
+    </li> 
+    <a class="nav-link" href="board.html"><i class="fas fa-users"></i> Board Members</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="editorial-policies.html"><i class="fas fa-gavel"></i> Editorial Policies</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-link" href="http://localhost:3002"><i class="fas fa-book"></i> Browse Journals</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="home.html#contact"><i class="fas fa-phone-alt"></i> Contact</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="index.html"><i class="fas fa-sign-in-alt"></i> Login</a>
+    </li>
+    <li class="nav-item">
+  </ul>
+</div>
+</nav>
+<!-- End Header with Navigation -->
+
+</header>
+
+
+
+
+  <!-- sign up Form -->
+   <div class="container">
+      <div class="card-login"> 
+        <form id="signupForm">
+            
+            <h2 class="card-title text-center">Signup Form</h2>
+            <div class="mb-3">
+                <label for="firstName" class="form-label">First Name</label>
+                <input type="text" class="form-control" id="firstName" required>
+            </div>
+            <div class="mb-3">
+                <label for="lastName" class="form-label">Last Name</label>
+                <input type="text" class="form-control" id="lastName" required>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" required>
+            </div>
+            <div class="mb-3">
+                <label for="contact" class="form-label">Contact No</label>
+                <input type="text" class="form-control" id="contact" required>
+            </div>
+            <div class="mb-3">
+                <label for="field" class="form-label">Field</label>
+                <input type="text" class="form-control" id="field" required>
+            </div>
+            <div class="mb-3">
+                <label for="department" class="form-label">Department</label>
+                <input type="text" class="form-control" id="department" required>
+            </div>
+            <div class="mb-3">
+                <label for="designation" class="form-label">Designation</label>
+                <input type="text" class="form-control" id="designation" required>
+            </div>
+            <div class="mb-3">
+                <label for="institution" class="form-label">Institution</label>
+                <input type="text" class="form-control" id="institution" required>
+            </div>
+            <div class="mb-3">
+                <label for="address" class="form-label">Address</label>
+                <textarea class="form-control" id="address" rows="3" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-block">Register</button>
+        </form>
+    </div>
+  </div>
+
+    <!-- Loading Screen -->
+    <div class="loading-container" id="loadingContainer">
+        <div class="spinner-border text-light" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+        <div class="loading-text">Processing your registration...</div>
+    </div>
+
+    
+
+    <script>
+        document.getElementById('signupForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            // Show loading screen
+            document.getElementById('loadingContainer').style.display = 'flex';
+
+            const firstName = document.getElementById('firstName').value;
+            const lastName = document.getElementById('lastName').value;
+            const email = document.getElementById('email').value;
+            const contact = document.getElementById('contact').value;
+            const field = document.getElementById('field').value;
+            const department = document.getElementById('department').value;
+            const designation = document.getElementById('designation').value;
+            const institution = document.getElementById('institution').value;
+            const address = document.getElementById('address').value;
+
+            const userData = {
+                firstName, lastName, email, contact, field, department, designation, institution, address
+            };
+
+            fetch('/check-user', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ email: email })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.exists) {
+                    // User exists - show error message
+                    document.write(`
+                        <html>
+                        <head>
+                            <title>Registration Failed</title>
+                            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+                            <style>
+                                body {
+                                    display: flex;
+                                    flex-direction: column;
+                                    align-items: center;
+                                    justify-content: center;
+                                    height: 100vh;
+                                    text-align: center;
+                                    padding: 20px;
+                                    background-color: #f8f9fa;
+                                }
+                                .message-container {
+                                    max-width: 600px;
+                                    padding: 30px;
+                                    background-color: white;
+                                    border-radius: 10px;
+                                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                                }
+                                img {
+                                    width: 100px;
+                                    margin-bottom: 20px;
+                                }
+                                h2 {
+                                    color: #dc3545;
+                                }
+                            </style>
+                        </head>
+                        <body>
+                            <div class="message-container">
+                                <img src="https://cdn-icons-png.flaticon.com/512/1680/1680012.png" alt="Error">
+                                <h2>Registration Failed</h2>
+                                <p class="lead">A user with the email <strong>${email}</strong> already exists in our system.</p>
+                                <p>Please try using a different email address or contact support if you believe this is an error.</p>
+                                <a href="http://localhost:3000" class="btn btn-primary mt-4">Return to Registration</a>
+                            </div>
+                        </body>
+                        </html>
+                    `);
+                } else {
+                    // User doesn't exist, proceed with registration
+                    fetch('/send-email', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(userData)
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        // Registration successful
+                        document.write(`
+                            <html>
+                            <head>
+                                <title>Registration Successful</title>
+                                <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+                                <style>
+                                    body {
+                                        display: flex;
+                                        flex-direction: column;
+                                        align-items: center;
+                                        justify-content: center;
+                                        height: 100vh;
+                                        text-align: center;
+                                        padding: 20px;
+                                        background-color: #f8f9fa;
+                                    }
+                                    .message-container {
+                                        max-width: 600px;
+                                        padding: 30px;
+                                        background-color: white;
+                                        border-radius: 10px;
+                                        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                                    }
+                                    img {
+                                        width: 100px;
+                                        margin-bottom: 20px;
+                                    }
+                                    h2 {
+                                        color: #28a745;
+                                    }
+                                </style>
+                            </head>
+                            <body>
+                                <div class="message-container">
+                                    <img src="https://cdn-icons-png.flaticon.com/512/190/190411.png" alt="Success">
+                                    <h2>Registration Successful!</h2>
+                                    <p class="lead">Thank you for registering, <strong>${firstName} ${lastName}</strong>!</p>
+                                    <p>We've sent a confirmation email to <strong>${email}</strong> with your login details.</p>
+                                    <a href="http://localhost:3001" class="btn btn-success mt-4">Continue to Login</a>
+                                </div>
+                            </body>
+                            </html>
+                        `);
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                        alert('An error occurred while processing your registration.');
+                        document.getElementById('loadingContainer').style.display = 'none';
+                    });
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('An error occurred while checking user existence.');
+                document.getElementById('loadingContainer').style.display = 'none';
+            });
+        });
+    </script>
+<footer>
+  <!-- Footer -->
+ <p1>Thiagarajar Journal of Engineering, Science, Design, and Technology.</p1><br>
+ <p1>Thiagarajar College of Engineering, Madurai - 625 015, Tamilnadu, India.</p1><br>
+  <p1>Contact us at: <a href="mailto:tjesdt@tce.edu">tjesdt@tce.edu</a> |<a>  Phone: +91 452 2482240 </a>  | <a href="tce.edu">www.tce.edu</a> </p1><br>
+  <p1>Copyright © 2025  All Rights Reserved. </p1><br>
+  <div>
+    <a href="https://www.facebook.com/TheOfficialTCEPage" target="_blank"><img alt="ta" src="fb.png" style="width: 2em; height: 2em;"></a>
+    <a href="https://www.linkedin.com/in/tcemadurai" target="_blank"><img alt="ta" src="li.png" style="width: 2em; height: 2em;"></a>
+    <a href="https://twitter.com/tceofficialpage" target="_blank"><img alt="ta" src="tw.png" style="width: 2em; height: 2em;"></a>
+    <a href="https://www.instagram.com/tce_madurai/" target="_blank"><img alt="ta" src="insta.png" style="width: 2em; height: 2em;"></a>
+    <a href="https://www.youtube.com/ThiagarajarCollegeofEngineeringTCE"><img alt="ta" src="yt.png" style="width: 2em; height: 2em;"></a>
+  </div>
+
+</footer>
+
+
+  <!-- Bootstrap JS and dependencies -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

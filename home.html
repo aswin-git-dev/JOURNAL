@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thiagarajar Journal of Engineering, Science, Design, and Technology</title>
+  
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- FontAwesome Icons (Updated CDN) -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+  <!-- Google Fonts: Poppins and Playfair Display -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <!--<style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-image: url('tce.jpg');
+      background-size: cover;
+      background-position: center center;
+      background-attachment: fixed;
+      color: #5a4e3e;
+    }
+
+    /* Updated Navbar Styles */
+    .navbar {
+      background-color: brown;
+      padding: 0;
+      min-height: 80px;
+      display: flex;
+      align-items: center;
+    }
+    
+    .navbar-brand {
+      padding: 0;
+      margin: 0;
+      height: 80px;
+      display: flex;
+      align-items: center;
+    }
+    
+    .navbar-brand img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      margin: 0;
+      padding: 0px;
+    }
+    
+    .journal-title {
+      color: white;
+      font-weight: bold;
+      font-size: 1.2rem !important;
+      text-transform: uppercase;
+      padding-left: 20px;
+      margin: 0;
+      line-height: 1.2;
+      flex-grow: 1;
+      text-align: left;
+    }
+
+    .navbar-nav .nav-item {
+      padding: 0 10px;
+    }
+    
+    .navbar-brand, .nav-link {
+      color: white !important;
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.97rem;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .navbar-brand:hover, .nav-link:hover {
+      color: #fff !important;
+      text-decoration: underline;
+    }
+
+    .navbar-nav .nav-item.active .nav-link {
+      color: #FF4F3A !important;
+      font-weight: 700;
+    }
+
+    .navbar-toggler {
+      border: none;
+    }
+
+    .navbar-collapse {
+      justify-content: flex-end;
+      flex-grow: 0;
+    }
+
+    /* Responsive navbar adjustments */
+    @media (max-width: 992px) {
+      .journal-title {
+        font-size: 1rem !important;
+      }
+      
+      .navbar-brand {
+        width: 70px;
+        height: 70px;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .journal-title {
+        font-size: 1rem !important;
+        padding-left: 10px;
+      }
+      
+      .navbar-brand {
+        width: 60px;
+        height: 60px;
+      }
+    }
+
+    .section-title {
+      text-align: center;
+      color: #4E2A84;
+      background-color: white;
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      margin: 60px;
+      font-size: 2.5rem;
+      border-radius: 100px;
+      margin-top: 40px;
+    }
+
+    .section-content {
+      padding: 20px;
+      margin: 20px auto;
+      border-radius: 8px;
+      background-color: #fff;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      max-width: 900px;
+    }
+    
+    .card {
+      margin: 15px 0;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .card-body {
+      background-color: rgba(255, 255, 255, 0.7);
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Carousel Styles */
+    #imageCarousel {
+      width: 100%;
+      height: 400px;
+      overflow: hidden;
+      margin-bottom: 20px;
+    }
+
+    .carousel-item {
+      height: 400px;
+    }
+
+    .carousel-item img {
+      width: 100%;
+      height: 400px;
+      object-fit: fill;
+      object-position: center;
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+      background-color: rgba(0, 0, 0, 0.5);
+      border-radius: 50%;
+      padding: 20px;
+    }
+
+    /* Dropdown Menu Styles */
+    .dropdown-menu {
+      background-color: brown;
+      color: antiquewhite;
+      border: none;
+      z-index: 1050;
+    }
+
+    .dropdown-item {
+      color: white !important;
+    }
+
+    .dropdown-item:hover {
+      background-color: #FF4F3A;
+      color: white;
+    }
+
+    .dropdown-toggle::after {
+      content: none;
+    }
+
+    .dropdown-menu-right {
+      right: 0;
+      left: auto;
+    }
+
+    .navbar-right {
+      margin-right: 15px;
+    }
+
+    /* Container and Text Styles */
+    .container {
+      margin-top: 40px;
+      max-width: 900px;
+    }
+
+    .recent-updates {
+      background-color: #fff;
+      padding: 30px;
+      margin-top: 50px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    .recent-updates h3 {
+      text-align: center;
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: 2rem;
+      color: #4E2A84;
+    }
+    .recent-updates p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      text-align: justify;
+    }
+
+    p {
+      text-align: justify;
+    }
+
+    p1 {
+      text-align: center;
+      line-height: 2;
+    }
+
+    /* Footer Styles */
+    footer {
+      background-color: brown;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    footer a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style> -->
+</head>
+<body>
+  <header>
+
+    <!-- Pre-header with Journal Title -->
+<div class="pre-header text-center py-2 bg-light">
+<span class="journal-title">Thiagarajar Journal of Engineering, Science, Design, and Technology (TJESDT)</span>
+</div>
+
+<!-- Header with Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light">
+<a class="navbar-brand" href="home.html">
+  <img src="logo.png" alt="TJESDT Logo">
+</a>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarNav">
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link" href="home.html#aim-scope"><i class="fas fa-bullseye"></i> Aim & Scope</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="home.html#publication-info"><i class="fas fa-th"></i> Publication Info</a>
+    </li> 
+    <a class="nav-link" href="board.html"><i class="fas fa-users"></i> Board Members</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="editorial-policies.html"><i class="fas fa-gavel"></i> Editorial Policies</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-link" href="http://localhost:3002"><i class="fas fa-book"></i> Browse Journals</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="home.html#contact"><i class="fas fa-phone-alt"></i> Contact</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="index.html"><i class="fas fa-sign-in-alt"></i> Login</a>
+    </li>
+    <li class="nav-item">
+  </ul>
+</div>
+</nav>
+<!-- End Header with Navigation -->
+
+</header>
+
+
+
+      
+  <!-- Recent Updates Section -->
+  <div class="recent-updates">
+    <h3>Recent Updates</h3>
+    <div id="imageCarousel" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="pic2.jpg" class="d-block" alt="Update Image 1">
+        </div>
+        <div class="carousel-item">
+          <img src="pic1.jpeg" class="d-block" alt="Update Image 2">
+        </div>
+        
+      </div>
+      <a class="carousel-control-prev" href="#imageCarousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#imageCarousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+    <p>We are excited to announce that our journal is now accepting submissions for the upcoming special issue on Sustainable Development. The editorial board is reviewing abstracts for upcoming full papers. Stay tuned for more updates!</p>
+  </div>
+
+  <!-- Home Page Content -->
+  <div class="container-in">
+
+    <!-- Aim & Scope Section -->
+    <div id="aim-scope" class="card">
+      <div class="card-body">
+        <h2 class="section-title">Aim</h2>
+        <p>Thiagarajar Journal of Engineering, Science, Design, and Technology (TJESDT) aims to serve as
+          an interdisciplinary platform for the publication of cutting-edge research in the areas of
+          engineering, applied sciences, technological innovation, and design in national level across all
+          the Indian states. The journal seeks to foster collaboration between researchers, professionals,
+          and practitioners from diverse fields, providing a venue for the exchange of ideas and
+          dissemination of high-impact findings that drive technological advancements and scientific
+          discovery.
+          </p>
+          <h2 class="section-title">Scope</h2>
+        <p>TJESDT publishes original research articles, review papers, and technical reports that contribute
+to the understanding and development of engineering, science, design and technology. The
+journal covers a broad spectrum of Topics covered include Civil, Mechanical, Electrical, Electronics, Computer Science, Environmental Engineering, AI, Robotics, Quantum Computing, Renewable Energy, and more.
+</p>
+        <a href="javascript:void(0);" id="moreLink" onclick="toggleMoreInfo()">Click here to see More</a>
+        <div id="additionalInfo" style="display:none;">
+          <h3>Engineering:</h3>
+          <ul>
+            <li>Civil, Mechanical, Electrical Engineering</li>
+            <li>Electronics and Communication Engineering</li>
+            <li>Computer Science and Engineering</li>
+            <li>Environmental and Sustainable Engineering</li>
+            <li>Industrial Engineering and Manufacturing</li>
+            <li>Materials Science and Nanotechnology</li>
+            <li>Structural Engineering</li>
+            <li>Robotics and Automation</li>
+          </ul>
+          <h3>Applied Science:</h3>
+          <ul>
+            <li>Physics, Chemistry, and Mathematical Modeling</li>
+            <li>Computational and Data Science</li>
+            <li>Environmental Science and Green Technologies</li>
+            <li>Artificial Intelligence and Machine Learning</li>
+            <li>Quantum Computing and Simulation</li>
+            <li>Cognitive Science</li>
+            <li>Renewable Energy and Smart Grids</li>
+          </ul>
+          <h3>Design:</h3>
+          <ul>
+            <li>Building Design and Urban Infrastructure</li>
+            <li>Product Design and Development</li>
+            <li>Engineering Design and Innovation</li>
+            <li>Computer-Aided Design (CAD) and Simulation Tools</li>
+            <li>Human-Computer Interaction (HCI) and User Experience (UX)</li>
+            <li>Design Thinking and Creative Problem Solving</li>
+          </ul>
+          <h3>Technology:</h3>
+          <ul>
+            <li>Internet of Things (IoT)</li>
+            <li>Cyber-Physical Systems</li>
+            <li>Smart Manufacturing and Industry 4.0</li>
+            <li>Blockchain and Cyber security</li>
+            <li>3D Modeling and Printing</li>
+            <li>Emerging Technologies and Digital Transformation</li>
+            <li>Educational Technology</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function toggleMoreInfo() {
+        var moreInfo = document.getElementById('additionalInfo');
+        var moreLink = document.getElementById('moreLink');
+        if (moreInfo.style.display === 'none') {
+          moreInfo.style.display = 'block';
+          moreLink.innerHTML = 'Click here to see Less'; // Change text to "Less" when shown
+        } else {
+          moreInfo.style.display = 'none';
+          moreLink.innerHTML = 'Click here to see More'; // Change text back to "More"
+        }
+      }
+    </script>
+
+    <!-- Combined Publication Types & Frequency Section -->
+    <div id="publication-info" class="card">
+      <div class="card-body">
+        <h2 class="section-title">Publication Types & Frequency</h2>
+        <p>TJESDT publishes the following types of content:</p>
+        <ul>
+          <li>Original Research Articles</li>
+          <li>Review Articles</li>
+          <li>Case Studies/Practices</li>
+          <li>Special Issues</li>
+        </ul>
+        <h3>Publication Frequency</h3>
+        <p>Twice in a year</p>
+      </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div id="contact" class="card">
+      <div class="card-body">
+        <h2 class="section-title">Contact</h2>
+        <p>For more information, inquiries, or support, please contact us:</p>
+        <p>Email: <a href="mailto:contact@tjesdt.org">tjesdt@tce.edu</a></p>
+        <p>Phone: +91 452 2482240</p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <!-- Footer -->
+   <p1>Thiagarajar Journal of Engineering, Science, Design, and Technology.</p1><br>
+   <p1>Thiagarajar College of Engineering, Madurai - 625 015, Tamilnadu, India.</p1><br>
+    <p1>Contact us at: <a href="mailto:tjesdt@tce.edu">tjesdt@tce.edu</a> |<a>  Phone: +91 452 2482240 </a>  | <a href="tce.edu">www.tce.edu</a> </p1><br>
+    <p1>Copyright © 2025  All Rights Reserved. </p1><br>
+    <div>
+      <a href="https://www.facebook.com/TheOfficialTCEPage" target="_blank"><img alt="ta" src="fb.png" style="width: 2em; height: 2em;"></a>
+      <a href="https://www.linkedin.com/in/tcemadurai" target="_blank"><img alt="ta" src="li.png" style="width: 2em; height: 2em;"></a>
+      <a href="https://twitter.com/tceofficialpage" target="_blank"><img alt="ta" src="tw.png" style="width: 2em; height: 2em;"></a>
+      <a href="https://www.instagram.com/tce_madurai/" target="_blank"><img alt="ta" src="insta.png" style="width: 2em; height: 2em;"></a>
+      <a href="https://www.youtube.com/ThiagarajarCollegeofEngineeringTCE"><img alt="ta" src="yt.png" style="width: 2em; height: 2em;"></a>
+    </div>
+  
+</footer>
+
+
+  <!-- Bootstrap JS and dependencies -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

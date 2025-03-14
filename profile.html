@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEJxn+K7cF0Xk9+L9fP6A1A7mctsVfzqEmGn1/AYvg4p3yA01Tk5cK9zVScXh" crossorigin="anonymous">
+    
+    <title>Thiagarajar Journal of Engineering, Science, Design, and Technology</title>
+  
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  
+    <!-- FontAwesome Icons (Updated CDN) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  
+    <!-- Google Fonts: Poppins and Playfair Display -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+
+    body {
+  font-family: 'Poppins', sans-serif;
+  background-image: url('http://localhost:3001/tce.jpg'); /* Background Image */
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  color: #5a4e3e;    
+}
+
+.journal-title {
+        color: black !important;
+        font-weight: bold;
+        font-size: 1.4rem !important;
+        text-transform: uppercase;
+        padding-left: 20px;
+        margin: 0;
+        line-height: 1.2;
+        flex-grow: 1;
+        text-align: left;
+      }
+      
+.navbar {
+      background-color: brown;
+      padding: 0;
+      min-height: 80px;
+      display: flex;
+      align-items: center;
+    }
+    
+    .navbar-brand {
+      padding: 0;
+      margin: 0;
+      height: 80px;
+      display: flex;
+      align-items: center;
+    }
+    
+    .navbar-brand img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      margin: 0;
+      padding: 0px;
+    }
+
+    .navbar-nav .nav-item {
+      padding: 0 10px;
+    }
+    
+    .navbar-brand, .nav-link {
+      color: white !important;
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.97rem;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .navbar-brand:hover, .nav-link:hover {
+      color: #fff !important;
+      text-decoration: underline;
+    }
+
+    .navbar-nav .nav-item.active .nav-link {
+      color: #FF4F3A !important;
+      font-weight: 700;
+    }
+
+    .navbar-toggler {
+      border: none;
+    }
+
+    .navbar-collapse {
+      justify-content: flex-end;
+      flex-grow: 0;
+    }
+
+    /* Responsive navbar adjustments */
+    @media (max-width: 992px) {
+      .journal-title {
+        font-size: 1rem !important;
+      }
+      
+      .navbar-brand {
+        width: 70px;
+        height: 70px;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .journal-title {
+        font-size: 1rem !important;
+        padding-left: 10px;
+      }
+      
+      .navbar-brand {
+        width: 60px;
+        height: 60px;
+      }
+    }
+
+
+    .btn {
+    background-color: #FF6F61;
+    color: white;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  
+  .btn:hover {
+    background-color: #FF4F3A;
+  }
+  
+        h2,
+        h3 {
+            color: #8b0000;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            display: flex;
+            padding: 20px;
+            justify-content: space-between;
+        }
+
+        /* Profile Section Styles */
+        .profile-section {
+            background-color: #8b0000;
+            padding: 30px;
+            border-radius: 10px;
+            width: min-content;
+            color: white;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .profile-section i {
+            font-size: 50px;
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .profile-section img {
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+
+        .profile-section h3 {
+            font-size: 1.6rem;
+            margin-bottom: 20px;
+        }
+
+        .profile-section p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+
+        .profile-section .btn-logout {
+            background-color: #a10000;
+            border-color: #a10000;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 12px;
+            font-size: 1.2rem;
+            width: 100%;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .profile-section .btn-logout:hover {
+            background-color: #8b0000;
+            border-color: #8b0000;
+        }
+
+        /* Upload Section Styles */
+        .upload-container {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 30px;
+            border-radius: 10px;
+            width: 70%;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .upload-container h3 {
+            margin-bottom: 30px;
+            font-size: 1.8rem;
+        }
+
+        .form-control {
+            background-color: white;
+            border: 2px solid #8b0000;
+            border-radius: 12px;
+            padding: 12px 15px;
+            margin-bottom: 20px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+            width: 100%;
+        }
+
+        .form-control:focus {
+            border-color: #a10000;
+            box-shadow: 0 0 5px rgba(161, 0, 0, 0.5);
+        }
+
+        .form-label {
+            font-weight: bold;
+            color: #8b0000;
+            margin-bottom: 8px;
+            
+        }
+        
+        #journalFile::-webkit-file-upload-button {
+    transform: translateY(-3px); /* Adjust this value as needed */
+    position: relative;
+    
+}
+
+
+
+        .btn-primary {
+            background-color: #8b0000;
+            border-color: #8b0000;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 12px;
+            transition: background-color 0.3s ease;
+            font-size: 1.2rem;
+        }
+
+        .btn-primary:hover {
+            background-color: #a10000;
+            border-color: #a10000;
+        }
+
+        /* Profile Container Styles */
+        .profile-container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        /* Form Field Layout Styles */
+        .form-row {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .form-row .col {
+            flex: 1;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .profile-section {
+                width: 100%;
+                margin-right: 0;
+                margin-bottom: 30px;
+            }
+
+            .upload-container {
+                width: 100%;
+            }
+
+            .form-row {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+
+        /* Icon Styling */
+        .fa {
+            margin-right: 10px;
+        }
+        /* Ensure authors are aligned horizontally */
+.authors-container {
+    display: flex;
+    flex-direction: column; /* Stack authors */
+    gap: 15px; /* Add spacing between authors */
+}
+
+.author-entry {
+    display: flex;
+    gap: 10px; /* Add space between input fields */
+    align-items:baseline; /* Align items properly */
+}
+
+.author-entry input {
+    flex: 1; /* Make inputs take equal width */
+}
+
+.form-control auth {
+ width: 75%;
+}
+.remove-author {
+    background-color: #ff4f3a;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+
+        /* Footer Styles */
+  footer {
+        background-color: brown;
+        color: white;
+        padding: 20px 0;
+        text-align: center;
+        margin-top: 40px;
+        
+      }
+  
+      footer a {
+        color: white;
+        text-decoration: none;
+        margin: 0 10px;
+      }
+  
+      footer a:hover {
+        text-decoration: underline;
+      }
+    </style>
+
+
+<body>
+    <header>
+
+        <!-- Pre-header with Journal Title -->
+<div class="pre-header text-center py-2 bg-light">
+    <span class="journal-title">Thiagarajar Journal of Engineering, Science, Design, and Technology (TJESDT)</span>
+  </div>
+  
+  <!-- Header with Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <a class="navbar-brand" href="home.html">
+      <img src="logo.png" alt="TJESDT Logo">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="home.html#aim-scope"><i class="fas fa-bullseye"></i> Aim & Scope</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="home.html#publication-info"><i class="fas fa-th"></i> Publication Info</a>
+        </li> 
+        <a class="nav-link" href="board.html"><i class="fas fa-users"></i> Board Members</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="editorial-policies.html"><i class="fas fa-gavel"></i> Editorial Policies</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" href="http://localhost:3002"><i class="fas fa-book"></i> Browse Journals</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="home.html#contact"><i class="fas fa-phone-alt"></i> Contact</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="index.html"><i class="fas fa-sign-in-alt"></i> Login</a>
+        </li>
+        <li class="nav-item">
+      </ul>
+    </div>
+  </nav>
+  <!-- End Header with Navigation -->
+  
+</header>
+
+     
+   <!-- <h2>Thiagarajar College of Engineering</h2> -->
+    <div class="container profile-container">
+        <!-- Profile Section -->
+        <div class="profile-section">
+            <div class="text-center">
+               <!-- <i class="fa fa-user-circle"></i> -->
+                <img src="http://localhost:3001/pkit.jpg" alt="fa fa-user-circle">
+                <h3>User Profile</h3>
+                <div id="userDetails">
+                    <!-- User details will be displayed here -->
+                </div>
+                <button class="btn-logout" onclick="logout()">Log Out</button>
+                
+            </div>
+        </div>
+
+        <!-- Upload Journal Section -->
+        <div class="upload-container">
+            <p><h3><i class="fa fa-upload"></i>Upload Journal  </h3><h5><a href="template.docx">Click here to download template</a></h5></p>
+
+            <form id="journalForm">
+                <div class="form-row">
+                    <div class="col">
+                        <label for="journalTitle" class="form-label">Paper Title</label>
+                        <input type="text" class="form-control" id="journalTitle" required>
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="col">
+                        <label for="journalAbstract" class="form-label">Paper Abstract</label>
+                        <textarea class="form-control" id="journalAbstract" rows="4" required></textarea>
+                    </div>
+                  </div>
+
+                <div class="form-row">
+                  <div class="col">
+                      <label class="form-label">Authors</label>
+                      <div id="authorsContainer" class="authors-container">
+                          <div class="author-entry">
+                              <input type="text" class="form-control mb-2" name="authorName1[]" placeholder="First Name" required>
+                              <input type="text" class="form-control mb-2" name="authorName2[]" placeholder="Last Name" required>
+                              <input type="text" class="form-control mb-2" name="authorDesignation[]" placeholder="Designation" required>
+                              <input type="text" class="form-control mb-2" name="authorInstitution[]" placeholder="Institution" required>
+                          </div>
+                      </div>
+                      <button type="button" id="addAuthor" class="btn btn-secondary mt-2" onclick="addAuthor()">+ Add Author</button>
+                  </div>
+              </div>
+              
+                    <div class="col">
+                        <label for="journalFile" class="form-label">Upload Paper PDF</label>
+                        <input type="file" class="form-control" id="journalFile" accept="application/pdf" required style="height: 48px;">
+                      </div>
+                    
+                <button type="submit" class="btn btn-block"><i class="fa fa-upload"></i>Upload</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Fetch user details on profile page load
+        fetch('/get-profile')
+            .then(response => response.json())
+            .then(data => {
+                const userDetailsDiv = document.getElementById('userDetails');
+                userDetailsDiv.innerHTML = `
+                    <p><strong>First Name:</strong> ${data.firstName}</p>
+                    <p><strong>Last Name:</strong> ${data.lastName}</p>
+                    <p><strong>Username:</strong> ${data.email}</p>
+                    <p><strong>Email:</strong> ${data.email}</p>
+                    <p><strong>Contact:</strong> ${data.contact}</p>
+                    <p><strong>Field:</strong> ${data.field}</p>
+                    <p><strong>Designation:</strong> ${data.designation}</p>
+                    <p><strong>Institution:</strong> ${data.institution}</p>
+                    
+                    <p><strong>Address:</strong> ${data.address}</p>
+                `;
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('An error occurred while fetching your profile data');
+            });
+
+        // Handle journal upload
+document.getElementById('journalForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const journalTitle = document.getElementById('journalTitle').value;
+    const journalAbstract = document.getElementById('journalAbstract').value;
+    const journalFile = document.getElementById('journalFile').files[0];
+
+    // Collect all authors' details
+    const authorEntries = document.querySelectorAll('.author-entry');
+    const authorsData = [];
+
+    authorEntries.forEach(entry => {
+        const authorName1 = entry.querySelector('[name="authorName1[]"]').value;
+        const authorName2 = entry.querySelector('[name="authorName2[]"]').value;
+        const authorDesignation = entry.querySelector('[name="authorDesignation[]"]').value;
+        const authorInstitution = entry.querySelector('[name="authorInstitution[]"]').value;
+
+        authorsData.push({
+            firstname: authorName1,
+            lastname: authorName2,
+            designation: authorDesignation,
+            institution: authorInstitution
+        });
+    });
+
+    const formData = new FormData();
+    formData.append('journalTitle', journalTitle);
+    formData.append('journalAbstract', journalAbstract);
+    formData.append('journalFile', journalFile);
+    formData.append('authors', JSON.stringify(authorsData)); // Send authors as JSON string
+
+    fetch('/upload-journal', {
+        method: 'POST',
+        body: formData
+    })
+        .then(response => response.json())
+        .then(data => {
+            alert('Journal uploaded successfully');
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('An error occurred during journal upload');
+        });
+});
+
+
+        // Logout function
+        function logout() {
+            // Handle logout logic here (redirect, API call, etc.)
+            fetch('/logout', {
+            method: 'POST',
+            credentials: 'include' // Ensures cookies (session data) are sent with the request
+        })
+        .then(response => {
+            if (response.ok) {
+                // Redirect to login page after successful logout
+                window.location.href = '/'; 
+            } else {
+                alert('Logout failed. Please try again.');
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('An error occurred during logout');
+        });
+            alert('You have logged out!');
+        }
+        function addAuthor() {
+        const authorsList = document.getElementById('authorsList');
+        const authorEntry = document.createElement('div');
+        authorEntry.classList.add('author-entry');
+        authorEntry.innerHTML = `
+            <input type="text" class="form-control mb-2" name="authorName1[]" placeholder="First Name" required>
+            <input type="text" class="form-control mb-2" name="authorName2[]" placeholder="Last Name" required>
+            <input type="text" class="form-control mb-2" name="authorDesignation[]" placeholder="Designation" required>
+            <input type="text" class="form-control mb-2" name="authorInstitution[]" placeholder="Institution" required>
+            <button type="button" class="btn btn-danger btn-sm mt-2" onclick="removeAuthor(this)">Remove</button>
+        `;
+        authorsList.appendChild(authorEntry);
+    }
+    
+    function removeAuthor(button) {
+        button.parentElement.remove();
+    }
+    document.getElementById('addAuthor').addEventListener('click', function () {
+    const container = document.getElementById('authorsContainer');
+
+    const authorDiv = document.createElement('div');
+    authorDiv.classList.add('author-entry');
+
+    authorDiv.innerHTML = `
+        <input type="text" class="form-control" name="authorName1[]" placeholder="First Name" required>
+        <input type="text" class="form-control" name="authorName2[]" placeholder="Last Name" required>
+        <input type="text" class="form-control" name="authorDesignation[]" placeholder="Designation" required>
+        <input type="text" class="form-control" name="authorInstitution[]" placeholder="Institution" required>
+        <button type="button" class="remove-author">X</button>
+    `;
+
+    container.appendChild(authorDiv);
+
+    authorDiv.querySelector('.remove-author').addEventListener('click', function () {
+        container.removeChild(authorDiv);
+    });
+});
+
+    </script>
+<footer>
+    <!-- Footer -->
+   <p1>Thiagarajar Journal of Engineering, Science, Design, and Technology.</p1><br>
+   <p1>Thiagarajar College of Engineering, Madurai - 625 015, Tamilnadu, India.</p1><br>
+    <p1>Contact us at: <a href="mailto:tjesdt@tce.edu">tjesdt@tce.edu</a> |<a>  Phone: +91 452 2482240 </a>  | <a href="tce.edu">www.tce.edu</a> </p1><br>
+    <p1>Copyright © 2025  All Rights Reserved. </p1><br>
+    <div>
+      <a href="https://www.facebook.com/TheOfficialTCEPage" target="_blank"><img alt="ta" src="fb.png" style="width: 2em; height: 2em;"></a>
+      <a href="https://www.linkedin.com/in/tcemadurai" target="_blank"><img alt="ta" src="li.png" style="width: 2em; height: 2em;"></a>
+      <a href="https://twitter.com/tceofficialpage" target="_blank"><img alt="ta" src="tw.png" style="width: 2em; height: 2em;"></a>
+      <a href="https://www.instagram.com/tce_madurai/" target="_blank"><img alt="ta" src="insta.png" style="width: 2em; height: 2em;"></a>
+      <a href="https://www.youtube.com/ThiagarajarCollegeofEngineeringTCE"><img alt="ta" src="yt.png" style="width: 2em; height: 2em;"></a>
+    </div>
+  
+</footer>
+
+
+  <!-- Bootstrap JS and dependencies -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

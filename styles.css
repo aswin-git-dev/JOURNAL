@@ -9,6 +9,21 @@ body {
   
 }
 
+.edit-policy p{
+  padding-left:27px;
+}
+
+.pre-header1{
+  background-color: rgb(90, 5, 5);
+  color:white;
+  padding:10px;
+  align-items:center;
+  justify-content: center;
+  display:flex;
+  font-family: 'Poppins', sans-serif;
+  padding-left: 265px;
+}
+
 .news_announcement {
   background: #830000;
   float: left;
@@ -160,9 +175,28 @@ body {
       margin: 0;
       padding: 0px;
     }
+
+    .journal-title1 {
+      color: white !important;
+      font-weight: bold;
+      font-size: 1.4rem !important;
+      text-transform: uppercase;
+      padding-left: 20px;
+      margin: 0;
+      line-height: 1.2;
+      flex-grow: 1;
+      text-align: left;
+    }
+    
+    .pre-header{
+      text-align:center !important;
+      padding-bottom: .5rem !important;
+      padding-top: .5rem !important;
+      background-color: rgb(60, 2, 2);
+    }
     
     .journal-title {
-      color: black !important;
+      color: antiquewhite !important;
       font-weight: bold;
       font-size: 1.4rem !important;
       text-transform: uppercase;

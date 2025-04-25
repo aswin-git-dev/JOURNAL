@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Issue Details - Thiagarajar Journal</title>
+  
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- FontAwesome Icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+  <!-- Google Fonts: Poppins and Playfair Display -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  
+  <link rel="icon" type="image/jpg" href="img/icon.ico">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/issue-styles.css">
+</head>
+<body>
+  <header>
+    <!-- Pre-header with Journal Title -->
+    <div class="pre-header">
+      <span class="journal-title">Thiagarajar Journal of Engineering, Science, Design, and Technology (TJESDT)</span>
+    </div>
+
+    <!-- Header with Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <a class="navbar-brand" href="index.html">
+        <img src="img/logo.png" alt="TJESDT Logo">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html"><i class=""></i>HOME</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#aim-scope"><i class=""></i> Aim & Scope</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="board.html"><i class=""></i> Board Members</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="editorial-policies.html"><i class=""></i> Editorial Policies</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="sub-guide.html"><i class=""></i> SUBMISSION GUIDELINES</a>
+          </li> 
+          <li class="nav-item">
+            <a class="nav-link" href="https://drive.google.com/drive/folders/1WkABoNZ7CMeh-wqDVY3N9A9u0EUB9X9U?usp=sharing"><i class=""></i> ARTICLES</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://forms.gle/jgJ2BqafzfFpvGW67"><i class=""></i> SUBMIT PAPER</a>
+          </li> 
+        </ul>
+      </div>
+    </nav>
+  </header>
+  
+  <div class="container my-5">
+    <a href="browse.html" class="back-link">
+      <i class="fas fa-arrow-left"></i> Back to All Volumes
+    </a>
+    
+    <div id="issueDetails" class="issue-header">
+      <!-- This will be populated by JavaScript -->
+    </div>
+    
+    <div id="papersList" class="journal-table">
+      <!-- This will be populated by JavaScript -->
+    </div>
+  </div>
+
+  <footer id="footer">
+    <p1>Thiagarajar College of Engineering, Madurai - 625 015, Tamilnadu, India.</p1><br>
+    <p1>Contact us at: <a href="mailto:tjesdt@res.tce.edu">tjesdt@res.tce.edu</a> | <a>Phone: +91 452 2482240</a> | <a href="https://www.tce.edu">www.tce.edu</a></p1><br>
+    <p1>Copyright © 2025 All Rights Reserved.</p1><br>
+    <div>
+      <a href="https://www.facebook.com/TheOfficialTCEPage" target="_blank"><img alt="ta" src="img/fb.png" style="width: 2em; height: 2em;"></a>
+      <a href="https://www.linkedin.com/in/tcemadurai" target="_blank"><img alt="ta" src="img/li.png" style="width: 2em; height: 2em;"></a>
+      <a href="https://twitter.com/tceofficialpage" target="_blank"><img alt="ta" src="img/tw.png" style="width: 2em; height: 2em;"></a>
+      <a href="https://www.instagram.com/tce_madurai/" target="_blank"><img alt="ta" src="img/insta.png" style="width: 2em; height: 2em;"></a>
+      <a href="https://www.youtube.com/ThiagarajarCollegeofEngineeringTCE"><img alt="ta" src="img/yt.png" style="width: 2em; height: 2em;"></a>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS, jQuery, and Popper.js -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <script>
+    // Sample journal data - in a real implementation, this could be stored in separate JSON files
+    const journalData = {
+      "vol1": {
+        "year": 2023,
+        "issue1": {
+          "title": "Issue 1 (January-June 2023)",
+          "papers": [
+           
+          ]
+        },
+        "issue2": {
+          "title": "Issue 2 (July-December 2023)",
+          "papers": [
+           
+          ]
+        }
+      },
+      "vol2": {
+        "year": 2025,
+        "issue1": {
+          "title": "Issue 2 (upcoming)",
+          "papers": [
+           
+          ]
+        },
+        "issue2": {
+          "title": "Issue 1 (In-press)",
+          "papers": [
+          {
+             
+             "title": "Energywise - An Energy Audit: A Web-Based Approach for Preliminary Energy Audits",
+             "authors": "Praveen Kumar M, Charles Raja S, Vishnu Dharssini A C",
+             "pages": "1-12",
+             "downloadUrl": "#"
+           },
+           {
+             
+             "title": "Investigation of Wettability Characteristics on Epoxy/Cu-RGO Nanocomposites Coated Copper Surfaces",
+             "authors": "Pownraj C, Valan Arasu A, Devi B",
+             "pages": "13-24",
+             "downloadUrl": "#"
+           },
+           {
+             
+             "title": "Comprehensive review on the use of Industrial Waste in sustainable construction",
+             "authors": "Krishnamoorthy A, Jeykumar RKC, Letcham K",
+             "pages": "25-36",
+             "downloadUrl": "#"
+           },
+           {
+             "slNo": 4,
+             "id": "61",
+             "title": "Mechanical Properties of Agave Americana Fiber Reinforced Polyester Composite",
+             "authors": "Prabakaran Manickam",
+             "pages": "37-48",
+             "downloadUrl": "#"
+           },
+           {
+             "slNo": 5,
+             "id": "66",
+             "title": "Innovations in Bone Fracture Treatment: Role of Fixators in Orthopedic Care",
+             "authors": "Harishna S, Gracia Nirmala Rani D",
+             "pages": "49-60",
+             "downloadUrl": "#"
+           },
+           {
+             "slNo": 6,
+             "id": "74",
+             "title": "Enhancing Eye Disease Classification Through Deep Transfer Learning",
+             "authors": "Jayanthi Rajee R B, Mohamed Mansoor Roomi, Senthilarasi Marimuthu",
+             "pages": "61-72",
+             "downloadUrl": "#"
+           },
+           {
+             "slNo": 7,
+             "id": "92",
+             "title": "Medical Fake News Detection Using Ensemble Machine Learning Method",
+             "authors": "Jai Preetha S, Sridevi S, Ezhil G R",
+             "pages": "73-84",
+             "downloadUrl": "#"
+           },
+            {
+              "slNo": 1,
+              "id": "215",
+              "title": "Multi-modal Deep Learning for Medical Image Analysis",
+              "authors": "Deepa R, Arun Kumar P, Nithin S",
+              "pages": "1-14",
+              "downloadUrl": "#"
+            },
+            {
+              "slNo": 2,
+              "id": "220",
+              "title": "Blockchain-based Supply Chain Management System",
+              "authors": "Karthika M, Selvan P, Gowtham R",
+              "pages": "15-26",
+              "downloadUrl": "#"
+            },
+            {
+              "slNo": 3,
+              "id": "225",
+              "title": "Green Computing: Energy Optimization Techniques in Data Centers",
+              "authors": "Jaya Prakash S, Lakshmi N, Pradeep R",
+              "pages": "27-38",
+              "downloadUrl": "#"
+            },
+            {
+              "slNo": 4,
+              "id": "231",
+              "title": "Quantum Computing Applications in Cryptography",
+              "authors": "Ganesh Kumar T, Harini L, Balasubramanian V",
+              "pages": "39-52",
+              "downloadUrl": "#"
+            },
+            {
+              
+              "title": "IoT-Based Smart Agriculture Monitoring and Automation System",
+              "authors": "Senthil Kumar P, Ramya G, Karthik R",
+              "pages": "1-12",
+              "downloadUrl": "#"
+            },
+            {
+              "slNo": 2,
+              "id": "205",
+              "title": "Novel Approach for Water Quality Monitoring Using Low-Cost Sensors",
+              "authors": "Divya P, Vasanth Kumar M, Ramkumar S",
+              "pages": "13-24",
+              "downloadUrl": "#"
+            },
+            {
+              "slNo": 3,
+              "id": "210",
+              "title": "Sustainable Building Materials from Agricultural Waste: A Review",
+              "authors": "Priya V, Vinoth Kumar R, Rajeshwari S",
+              "pages": "25-36",
+              "downloadUrl": "#"
+            },
+            {
+              "slNo": 4,
+              "id": "213",
+              "title": "Energy-Efficient HVAC Systems for Smart Buildings",
+              "authors": "Murali A, Saravanan T, Vignesh P",
+              "pages": "37-48",
+              "downloadUrl": "#"
+            },
+            {
+              "slNo": 1,
+              "id": "98",
+              "title": "Fake Brand Detection: URL and Logo Analysis",
+              "authors": "Jagathsri B, Vikasni A, Abirami A M",
+              "pages": "1-14",
+              "downloadUrl": "#"
+            },
+            {
+              "slNo": 2,
+              "id": "99",
+              "title": "Assessing the possibility of using Industrial China Clay Waste as Partial Replacement of Cementitious Materials",
+              "authors": "Anusuya Sivaraja, Selvakumar Ponnusamy",
+              "pages": "15-28",
+              "downloadUrl": "#"
+            },
+            {
+              "slNo": 3,
+              "id": "105",
+              "title": "SAR Interferometry for Land Deformation Analysis",
+              "authors": "Saravanan S, Barath Devan H, Balaji T",
+              "pages": "29-42",
+              "downloadUrl": "#"
+            },
+            {
+              "slNo": 4,
+              "id": "155",
+              "title": "Empowering Electric Mobility: A Reinforced Q-Learning based Solar Power Prediction Model for EV Charging Systems",
+              "authors": "Yuvashree Sundar",
+              "pages": "43-56",
+              "downloadUrl": "#"
+            },
+            {
+              "slNo": 5,
+              "id": "163",
+              "title": "A Systematic Review: Fast Emotion Recognition based on PPG Signal",
+              "authors": "Suganya M, Rajeswari K",
+              "pages": "57-70",
+              "downloadUrl": "#"
+            },
+            {
+              "slNo": 6,
+              "id": "167",
+              "title": "Business Maneuver for Business Development",
+              "authors": "Tamizhenthan S, Miriyam HariKrishna, Subash S",
+              "pages": "71-82",
+              "downloadUrl": "#"
+            },
+            {
+              "slNo": 7,
+              "id": "180",
+              "title": "MgH2 coated SWCNTs Solar Cells in EVs",
+              "authors": "Rishapa P, Ubasini M, Vinoth Thyagarajan V",
+              "pages": "83-94",
+              "downloadUrl": "#"
+            }
+          ]
+        }
+      }
+    };
+
+    // Function to get URL parameters
+    function getUrlParams() {
+      const params = {};
+      const queryString = window.location.search.substring(1);
+      const pairs = queryString.split('&');
+      
+      for (const pair of pairs) {
+        const [key, value] = pair.split('=');
+        params[key] = decodeURIComponent(value || '');
+      }
+      
+      return params;
+    }
+
+    // Function to display issue details
+    function displayIssueDetails() {
+      const params = getUrlParams();
+      const vol = params.vol || '1';
+      const issue = params.issue || '1';
+      
+      const volumeData = journalData[`vol${vol}`];
+      const issueData = volumeData ? volumeData[`issue${issue}`] : null;
+      
+      if (!volumeData || !issueData) {
+        displayNotFound();
+        return;
+      }
+      
+      // Display issue header
+      const issueDetailsDiv = document.getElementById('issueDetails');
+      issueDetailsDiv.innerHTML = `
+        <h2>Volume ${vol-1} (${volumeData.year})</h2>
+        <h3>${issueData.title}</h3>
+      `;
+      
+      // Display papers in table format
+      const papersListDiv = document.getElementById('papersList');
+      
+      let tableHTML = `
+        <table class="table">
+          <thead>
+            <tr>
+             
+              <th style="width: 85%;">Title of the Article & Authors</th>
+            </tr>
+          </thead>
+          <tbody>
+      `;
+      
+      issueData.papers.forEach(paper => {
+        tableHTML += `
+          <tr>
+            
+            <td>
+              <div class="paper-title">${paper.title}</div>
+              <div class="paper-authors">
+                - ${paper.authors}
+                <span class="pages">Pages: ${paper.pages}</span>
+              </div>
+              <a href="${paper.downloadUrl}" class="download-btn">
+                <i class="fas fa-download"></i> Download PDF
+              </a>
+            </td>
+          </tr>
+        `;
+      });
+      
+      tableHTML += `
+          </tbody>
+        </table>
+      `;
+      
+      papersListDiv.innerHTML = tableHTML;
+    }
+
+    // Function to display not found message
+    function displayNotFound() {
+      const issueDetailsDiv = document.getElementById('issueDetails');
+      issueDetailsDiv.innerHTML = `
+        <div class="alert alert-warning">
+          <h4>Issue Not Found</h4>
+          <p>The requested volume or issue could not be found. Please navigate back to browse all volumes.</p>
+        </div>
+      `;
+      
+      document.getElementById('papersList').innerHTML = '';
+    }
+
+    // Initialize the page
+    document.addEventListener('DOMContentLoaded', displayIssueDetails);
+  </script>
+</body>
+</html>

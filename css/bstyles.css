@@ -1,0 +1,211 @@
+/* Browse Journal Page Specific Stylesheet */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap');
+
+/* Header styling specific to browse page */
+.browse-header {
+  background-color: #830000;
+  color: white;
+  padding: 40px 0;
+  text-align: center;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.browse-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  color: white;
+  text-transform: uppercase;
+}
+
+.browse-subtitle {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 300;
+  margin-bottom: 0;
+}
+
+/* Volume section styling */
+.volume-container {
+  max-width: 900px;
+  margin: 0 auto 50px;
+}
+
+.volume-heading {
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  color: #4E2A84;
+  margin-bottom: 30px;
+  font-size: 2rem;
+}
+
+.volume-row {
+  margin-bottom: 40px;
+  padding: 25px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.volume-row:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.volume-title {
+  color: #830000;
+  border-bottom: 3px solid #830000;
+  padding-bottom: 15px;
+  margin-bottom: 25px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 1.8rem;
+}
+
+/* Issue links styling */
+.issues-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.issue-link {
+  display: inline-flex;
+  align-items: center;
+  padding: 12px 20px;
+  background-color: #f4f0eb;
+  border-radius: 8px;
+  color: #5a4e3e;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  border: 1px solid transparent;
+}
+
+.issue-link:hover {
+  background-color: #830000;
+  color: white;
+  border-color: #5a0505;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.issue-link i {
+  margin-right: 12px;
+  font-size: 1.2rem;
+  color: #830000;
+  transition: color 0.3s ease;
+}
+
+.issue-link:hover i {
+  color: white;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .browse-title {
+    font-size: 2rem;
+  }
+  
+  .volume-heading {
+    font-size: 1.8rem;
+  }
+  
+  .volume-title {
+    font-size: 1.5rem;
+  }
+  
+  .volume-row {
+    padding: 20px 15px;
+  }
+  
+  .issues-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .issue-link {
+    width: 100%;
+    justify-content: flex-start;
+  }
+}
+
+/* Back to top button */
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background-color: #830000;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 999;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.back-to-top:hover {
+  background-color: #5a0505;
+  transform: translateY(-3px);
+}
+
+/* Special decoration for latest issue */
+.latest-issue {
+  position: relative;
+}
+
+.latest-badge {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background-color: #4E2A84;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Empty state styling */
+.empty-state {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+.empty-state i {
+  font-size: 3rem;
+  color: #830000;
+  margin-bottom: 20px;
+}
+
+.empty-state h3 {
+  color: #4E2A84;
+  margin-bottom: 15px;
+}
+
+.empty-state p {
+  color: #5a4e3e;
+  max-width: 500px;
+  margin: 0 auto;
+}
